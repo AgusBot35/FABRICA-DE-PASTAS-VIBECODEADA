@@ -1,12 +1,13 @@
-#TODO ABSOLUTAMENTE TODO VIBECODEADO
+# TODO ABSOLUTAMENTE TODO VIBECODEADO
 
-#BACKEND
-
+## BACKEND
+```bash
 cd /backend-fabrica
 docker compose up --build
-
-#FRONTEND
-
+```
+## FRONTEND
+```bash
 cd /frontend-fabrica
 npm install
 npm run build
+```
