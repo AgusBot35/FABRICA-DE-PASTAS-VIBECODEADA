@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  --masa: #FBF6EE;
+  --terracota: #C1502E;
+  --terracota-dark: #9C3D22;
+  --oliva: #5B6B3F;
+  --oliva-dark: #46532F;
+  --carbon: #2B2620;
+  --carbon-soft: #6B5F52;
+  --linea: #E5DBC9;
+  --semola: #F0E6D2;
+
+  --bs-primary: var(--terracota);
+  --bs-primary-rgb: 193, 80, 46;
+  --bs-success: var(--oliva);
+  --bs-success-rgb: 91, 107, 63;
+  --bs-body-bg: var(--masa);
+  --bs-body-color: var(--carbon);
+  --bs-border-color: var(--linea);
+  --bs-link-color: var(--terracota);
+  --bs-link-hover-color: var(--terracota-dark);
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--masa);
+  background-image:
+    radial-gradient(circle at 1px 1px, rgba(43,38,32,0.05) 1px, transparent 0);
+  background-size: 22px 22px;
+}
+
+h1, h2, h3, .font-display {
+  font-family: 'Fraunces', serif;
+  font-weight: 600;
+  color: var(--carbon);
+  letter-spacing: -0.01em;
+}
+
+/* ─── Navbar ────────────────────────────────────────────── */
+
+.fabrica-navbar {
+  background-color: var(--carbon);
+  border-bottom: 3px solid var(--terracota);
+}
+
+.fabrica-navbar .navbar-brand {
+  font-family: 'Fraunces', serif;
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: var(--masa) !important;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.fabrica-navbar .navbar-brand .brand-mark {
+  color: var(--terracota);
+}
+
+.fabrica-navbar .nav-link {
+  color: rgba(251, 246, 238, 0.65) !important;
+  font-weight: 500;
+  font-size: 0.92rem;
+  padding: 0.5rem 0.9rem !important;
+  border-radius: 6px;
+  transition: color 0.15s ease, background-color 0.15s ease;
+}
+
+.fabrica-navbar .nav-link:hover {
+  color: var(--masa) !important;
+  background-color: rgba(251, 246, 238, 0.08);
+}
+
+.fabrica-navbar .nav-link.active {
+  color: var(--masa) !important;
+  background-color: rgba(193, 80, 46, 0.25);
+}
+
+/* ─── Page header ───────────────────────────────────────── */
+
+.page-eyebrow {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--terracota);
+  margin-bottom: 0.25rem;
+}
+
+.page-title {
+  font-size: 2rem;
+  margin-bottom: 0.25rem;
+}
+
+.page-subtitle {
+  color: var(--carbon-soft);
+  font-size: 0.95rem;
+}
+
+/* ─── Cards & tables ────────────────────────────────────── */
+
+.card {
+  border: 1px solid var(--linea);
+  border-radius: 10px;
+  box-shadow: 0 1px 2px rgba(43, 38, 32, 0.04);
+}
+
+.card-header {
+  background-color: var(--semola);
+  border-bottom: 1px solid var(--linea);
+  font-weight: 600;
+  color: var(--carbon);
+}
+
+.table {
+  --bs-table-bg: transparent;
+}
+
+.table thead th {
+  background-color: var(--carbon);
+  color: var(--masa);
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+  border: none;
+  padding: 0.7rem 0.85rem;
+}
+
+.table thead th:first-child { border-top-left-radius: 8px; }
+.table thead th:last-child { border-top-right-radius: 8px; }
+
+.table tbody tr {
+  border-bottom: 1px solid var(--linea);
+}
+
+.table tbody tr:hover {
+  background-color: var(--semola);
+}
+
+/* ─── Buttons ───────────────────────────────────────────── */
+
+.btn-primary {
+  background-color: var(--terracota);
+  border-color: var(--terracota);
+}
+.btn-primary:hover, .btn-primary:focus {
+  background-color: var(--terracota-dark);
+  border-color: var(--terracota-dark);
+}
+
+.btn-success {
+  background-color: var(--oliva);
+  border-color: var(--oliva);
+}
+.btn-success:hover, .btn-success:focus {
+  background-color: var(--oliva-dark);
+  border-color: var(--oliva-dark);
+}
+
+.btn-outline-primary {
+  color: var(--terracota);
+  border-color: var(--terracota);
+}
+.btn-outline-primary:hover {
+  background-color: var(--terracota);
+  border-color: var(--terracota);
+}
+
+/* ─── Misc ──────────────────────────────────────────────── */
+
+.badge-relleno {
+  background-color: var(--oliva);
+}
+
+.precio-tag {
+  font-family: 'Fraunces', serif;
+  font-weight: 600;
+  color: var(--terracota-dark);
+}
+
+.empty-state {
+  text-align: center;
+  padding: 3rem 1rem;
+  color: var(--carbon-soft);
+}
+
+.empty-state svg {
+  opacity: 0.35;
+  margin-bottom: 0.75rem;
+}
+
+.form-label {
+  font-weight: 500;
+  font-size: 0.88rem;
+  color: var(--carbon);
+}
+
+.form-control:focus, .form-select:focus {
+  border-color: var(--terracota);
+  box-shadow: 0 0 0 0.2rem rgba(193, 80, 46, 0.15);
+}
+
+.spinner-fabrica {
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 3px solid var(--linea);
+  border-top-color: var(--terracota);
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
